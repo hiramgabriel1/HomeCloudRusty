@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background: #252525;
+}
+
+.iconFile{
+    width: 20px;
+}
+
+.titleUpload{
+    color: rebeccapurple;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin: 100px auto;
+}
+
+.container .buttonFiles{
+    margin: 0px 10px;
+}
+
+.container .buttonFiles:active{
+    transform: scale(.9);
+}

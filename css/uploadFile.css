@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background: #252525;
+}
+
+.iconFile{
+    width: 20px;
+}
+
+.titleUpload{
+    color: rebeccapurple;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin: 200px auto;
+}
+
+.file-select {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    width: 540px;
+    cursor: pointer;
+}
+  
+.file-select:active{
+    transform: scale(.9);    
+}
+
+.file-select::before {
+    background-color: #5678EF;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    content: 'Seleccionar'; /* testo por defecto */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+  
+.file-select input[type="file"] {
+    opacity: 0;
+    width: 200px;
+    height: 32px;
+    display: inline-block;
+}
+  
+#src-file1::before {
+    content: 'Seleccionar Archivo 1';
+}
