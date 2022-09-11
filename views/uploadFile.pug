@@ -11,5 +11,9 @@ html(lang="en")
             form(action="/files", method="post" enctype="multipart/form-data") 
                 input(type="file" name="file").file-select.file
                 input(type="submit", value="Subir")
-
+            script 
+                Swal.fire({
+                    icon: 'error'
+                })
         script(src="./scripts/upload.js") 
+        //- script(src="https://cdn.jsdelivr.net/npm/sweetalert2@11")

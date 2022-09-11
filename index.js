@@ -5,6 +5,7 @@ const app = express();
 const router = require("./router/router.js")
 const multer = require("multer");
 const mimeTypes = require("mime-types");
+const Swal = require('sweetalert2');
 
 //storage multer 
 const storage = multer.diskStorage({
@@ -14,19 +15,25 @@ const storage = multer.diskStorage({
     }
 })
 
-// lol
 // config multer
 const upload = multer({
     storage: storage
 })
 
 // server run
-app.listen("3000", function(req, res){
+app.listen(3000, function(){
     console.log("escuchando en el puerto 3000")
 })
 
-app.post("/files", upload.single('file'), function(req,res){
-    res.send("todo bien")
+// upload files
+app.post("/files", upload.single('file'), function(req,res,err){
+    try {
+        res.send("funciona")
+        console.log("upload file")
+    } catch (err) {
+        console.log(err)
+        res.send(`error al subir el fichero ${err}`);
+    }
 })
 
 // config template engine
