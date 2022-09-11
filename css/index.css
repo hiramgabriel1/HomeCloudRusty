@@ -13,20 +13,67 @@ body{
     width: 20px;
 }
 
-.titleUpload{
-    color: rebeccapurple;
-}
-
 .container{
     display: flex;
     justify-content: center;
     margin: 100px auto;
+    width: 500px;
+    overflow: hidden ;
 }
 
-.container .buttonFiles{
-    margin: 0px 10px;
+.container .button-content .buttonFiles{
+    margin: 10px 10px;
+    width: 800px;   
+}
+
+.container .button-content{
+    display: flex;
+    flex-direction: column;
 }
 
 .container .buttonFiles:active{
     transform: scale(.9);
+}
+
+.titleIndex{
+    color: #fff;
+}
+/* 
+.directorys{
+    display: flex;
+    margin: 200px auto;
+    position: absolute;
+    flex-wrap: wrap;
+}
+
+.directorys .content-icon{
+    width: 50px;
+    overflow: hidden;
+    margin: 20px 20px;
+}
+
+.directorys .content-icon img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+} */
+
+.icon-button{
+    width: 25px;
+    position: relative;
+    left: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .container{
+        padding: 20px 100px;
+    }
+
+    .container .buttonFiles{
+        width: 80px;
+    }
+
+    .titleIndex{
+        margin: 0px auto;
+    }
 }

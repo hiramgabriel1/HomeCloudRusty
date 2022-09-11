@@ -14,12 +14,23 @@ html(lang="en")
         title= title 
     body 
 
-    h1.display-6.text-primary.text-center.mt-5 Hola mundo
+    h1.display-6.text-center.mt-5.titleIndex HomeCloudRusty
 
     //- container
     div.container
-        a(href="/upload").btn.btn-primary.buttonFiles Upload Files
-        a(href="/notes").btn.btn-primary.buttonFiles Create Notes
+        div.button-content
+            a(href="/upload").btn.btn-primary.buttonFiles Upload Files
+                img(src="./assets/folder.png", alt="").icon-button
+            a(href="/notes").btn.btn-success.buttonFiles Create Notes
+                img(src="./assets/folder.png", alt="").icon-button
+            a(href="/directorys").btn.btn-secondary.buttonFiles My Directorys
+                img(src="./assets/folder.png", alt="").icon-button
 
-
-    script(src="./model/events.js") 
+        //- icons directorys
+        //- div.directorys
+        //-     div.content-icon
+        //-         img(src="./assets/folder-icon.png", alt="dont file", srcset="")
+        //-     div.content-icon
+        //-         img(src="./assets/folder-icon.png", alt="dont file", srcset="")
+        //-     div.content-icon
+        //-         img(src="./assets/folder-icon.png", alt="dont file", srcset="")
