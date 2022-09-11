@@ -7,13 +7,11 @@ html(lang="en")
         link(rel="stylesheet", href="uploadFile.css")
         title Home Cloud
     body 
+        h2 Upload a File
         div.container
             form(action="/files", method="post" enctype="multipart/form-data") 
-                input(type="file" name="file").file-select.file
-                input(type="submit", value="Subir")
-            script 
-                Swal.fire({
-                    icon: 'error'
-                })
+                div.content-buttons
+                    input(type="file" name="file").file-select.file
+                    input(type="submit", value="Subir").buttonUploadFile.btn.btn-primary
+
         script(src="./scripts/upload.js") 
-        //- script(src="https://cdn.jsdelivr.net/npm/sweetalert2@11")

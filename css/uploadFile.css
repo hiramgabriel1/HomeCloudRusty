@@ -9,8 +9,11 @@ body{
     background: #252525;
 }
 
-.iconFile{
-    width: 20px;
+h2{
+   text-align: center;
+   position: relative;
+   top: 20px; 
+   color: #fff;
 }
 
 .titleUpload{
@@ -20,7 +23,9 @@ body{
 .container{
     display: flex;
     justify-content: center;
-    margin: 200px auto;
+    width: 500px;
+    margin: 100px auto;
+    overflow: hidden;
 }
 
 .file-select {
@@ -42,7 +47,7 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 3px;
-    content: 'Seleccionar'; /* testo por defecto */
+    content: 'Seleccionar'; /* texto por defecto */
     position: absolute;
     left: 0;
     right: 0;
@@ -59,4 +64,25 @@ body{
   
 #src-file1::before {
     content: 'Seleccionar Archivo 1';
+}
+
+.container .content-buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.container .content-buttons .buttonUploadFile{
+    width: 200px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto;
+}
+
+@media screen and (max-width: 530px) {
+    .container {
+        width: 300px;
+    }
 }
