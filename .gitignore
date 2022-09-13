@@ -1,5 +1,5 @@
 .html
 node_modules
 fileServer
-.github
+.github/workflows
 example-files
