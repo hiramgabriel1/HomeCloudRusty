@@ -1,11 +1,11 @@
 const express = require("express");
 const path = require("path")
-const { reset } = require("nodemon");
+// const { reset } = require("nodemon");
 const app = express();
 const router = require("./router/router.js")
 const multer = require("multer");
 const mimeTypes = require("mime-types");
-const Swal = require('sweetalert2');
+const ngrok = require('ngrok');
 
 //storage multer 
 const storage = multer.diskStorage({
@@ -29,7 +29,7 @@ app.listen(3000, function(){
 app.post("/files", upload.single('file'), function(req,res,err){
     try {
         res.send("funciona")
-        console.log("upload file")
+        console.log("upload file".concat(JSON.stringify(storage)));      
     } catch (err) {
         console.log(err)
         res.send(`error al subir el fichero ${err}`);
@@ -44,4 +44,5 @@ app.set("view engine", "pug")
 app.use(express.static("./css"));
 app.use(express.static("./views"));
 app.use(express.static("./assets"));
+app.use(express.static("./controller"));
 app.use(router)

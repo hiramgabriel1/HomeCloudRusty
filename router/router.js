@@ -15,4 +15,8 @@ router.get("/notes", function(req, res){
 router.get("/directorys", function(req, res){
     res.render("directorys")
 })
+
+router.get("/conex", function(req,res){
+    res.render("conex.pug")
+})
 module.exports = router;

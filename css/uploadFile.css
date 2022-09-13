@@ -6,33 +6,39 @@
 }
 
 body{
-    background: #252525;
+    background: #EDEDED;
 }
 
 h2{
    text-align: center;
    position: relative;
    top: 20px; 
-   color: #fff;
-}
-
-.titleUpload{
-    color: rebeccapurple;
+   color: #000;
 }
 
 .container{
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    display: flex;
+    margin: 100px auto;
+    border: 1px solid rgb(52, 99, 255);
+    box-shadow: 0px 0px 10px 0px;
+    background: #fff;
+}
+
+.container .content-form{
     display: flex;
     justify-content: center;
-    width: 500px;
-    margin: 100px auto;
-    overflow: hidden;
+    margin: 20px 100px auto;
+
 }
 
 .file-select {
     position: relative;
     display: inline-block;
     padding: 10px;
-    width: 540px;
+    width: 200px;
     cursor: pointer;
 }
   
@@ -47,42 +53,72 @@ h2{
     justify-content: center;
     align-items: center;
     border-radius: 3px;
-    content: 'Seleccionar'; /* texto por defecto */
-    position: absolute;
+    content: 'Seleccionar'; 
+     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-}
-  
+} 
+
 .file-select input[type="file"] {
     opacity: 0;
-    width: 200px;
+    width: 100px;
     height: 32px;
     display: inline-block;
 }
-  
-#src-file1::before {
+
+ #src-file1::before {
     content: 'Seleccionar Archivo 1';
 }
 
-.container .content-buttons{
+.content-buttons{
     display: flex;
     flex-direction: column;
 }
 
-.container .content-buttons .buttonUploadFile{
-    width: 200px;
-    padding: 10px;
+.content-buttons input[type="submit"]{
+    position: relative;
+    top: 30px;
     border: none;
     outline: none;
-    border-radius: 5px;
     cursor: pointer;
-    margin: 20px auto;
+    padding: 10px;
+    width: 200px;
 }
 
-@media screen and (max-width: 530px) {
+.content-buttons input[type="submit"]:active{
+    transform: scale(.9);
+}
+
+.content-image-preview{
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px 100px auto;
+    position: absolute;
+    object-fit: cover;
+}
+
+.content-image-preview img{
+    width: 100%;
+    /* height: 100%; */
+}
+/* !flexbox */
+ @media screen and (max-width: 530px) {
     .container {
         width: 300px;
     }
-}
+    .container .content-form{
+        margin: 10px 50px auto;
+    }
+
+    .content-image-preview{
+        width: 220px;
+        height: 220px;
+        margin: 150px 45px auto;
+    }
+} 
