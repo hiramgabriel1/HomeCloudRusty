@@ -26,9 +26,10 @@ app.listen(3000, function(){
 })
 
 // upload files
-app.post("/files", upload.single('file'), function(req,res,err){
+app.post("/fileUpload", upload.single('file'), function(req,res,err){
     try {
         res.send("funciona")
+        // res.sendFile(path.join(__dirname, "../views/index.pug"))
         console.log("upload file".concat(JSON.stringify(storage)));      
     } catch (err) {
         console.log(err)
