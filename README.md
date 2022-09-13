@@ -6,7 +6,7 @@ Clonar el repositorio y crear un directorio llamado fileServer o modificar desde
 
 
 ### Imagenes del proyecto
-![./example-files/img1.bmp]
-![./example-files/img2.bmp]
-![./example-files/img3.bmp]
-![./example-files/img4.bmp]
+![Image text](./example-files/img1.bmp)
+![Image text](./example-files/img2.bmp)
+![Image text](./example-files/img3.bmp)
+![Image text](./example-files/img4.bmp)
