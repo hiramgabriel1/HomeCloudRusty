@@ -5,7 +5,7 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="uploadFile.css")
-        title Home Cloud
+        title Home Cloud - Upload Files
     body 
         h2 Upload a File
         div.container
@@ -13,7 +13,8 @@ html(lang="en")
                 form(action="/fileUpload", method="post" enctype="multipart/form-data") 
                     div.content-buttons
                         input(type="file" name="file").file-select.file
-                        input(type="submit", value="Subir").buttonUploadFile.btn.btn-primary
+                        input(type="submit", value="Upload File").buttonUploadFile.btn.btn-primary
+                        br
             div.content-image-preview
                 img(src="", alt="").preview-image
 

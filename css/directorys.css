@@ -3,3 +3,14 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body{
+    background: #252525;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title{
+    color: #fff;
+    text-align: center;
+    margin: 50px;
+}

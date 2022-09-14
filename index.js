@@ -5,7 +5,7 @@ const app = express();
 const router = require("./router/router.js")
 const multer = require("multer");
 const mimeTypes = require("mime-types");
-const ngrok = require('ngrok');
+// const ngrok = require('ngrok');
 
 //storage multer 
 const storage = multer.diskStorage({
@@ -28,8 +28,8 @@ app.listen(3000, function(){
 // upload files
 app.post("/fileUpload", upload.single('file'), function(req,res,err){
     try {
-        res.send("funciona")
-        // res.sendFile(path.join(__dirname, "../views/index.pug"))
+        res.send("<a href='/upload'>return</a>");  
+
         console.log("upload file".concat(JSON.stringify(storage)));      
     } catch (err) {
         console.log(err)
