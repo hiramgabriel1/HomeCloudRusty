@@ -1,11 +1,9 @@
 const express = require("express");
 const path = require("path")
-// const { reset } = require("nodemon");
 const app = express();
 const router = require("./router/router.js")
 const multer = require("multer");
 const mimeTypes = require("mime-types");
-// const ngrok = require('ngrok');
 
 //storage multer 
 const storage = multer.diskStorage({
